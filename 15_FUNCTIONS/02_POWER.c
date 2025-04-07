@@ -1,39 +1,31 @@
-/*2) Write a function that takes two numbers, a and n as input arguments and returns the value of a to the power of n, without using * operator    */
-
+/*2) Write a function that takes two numbers, a and n as input arguments and returns the value of a to the power of n, without using * operator */
 
 #include<stdio.h>
-
-int POWER(int a, int n);
-
+void POWER(int a, int n);
 int main()
 {
-	int a, n;
-	printf("Enter value of a and n: ");
-	scanf("%d %d", &a, &n);
-
-	int r = POWER(a, n);
-
-	printf("\n%d POWER %d VALUE is %d\n", a, n, r);
-	return 0;
+	int a,n;
+	printf("Enter values of a and n: ");
+	scanf("%d %d",&a,&n);
+	POWER(a,n);
 }
 
-int POWER(int a, int n)
+void POWER(int a, int n)
 {
-	int i, j;
-	int c = 0, d = 1;
-
-	for(i = 0; i < n; i++)
+	int i,j,k,p=1,sum;
+	for(i=0;i<n;i++)
 	{
-		c = 0;
-
-		for(j = 0; j < a; j++)
+		sum=0;
+		for(j=0;j<p;j++)
 		{
-			c += d;
+
+			for(k=0;k<a;k++)
+			{
+				sum++;
+			}
 		}
+		p=sum;
 
-		d = c;
 	}
-
-	return d;
+	printf("\n%d",p);
 }
-
