@@ -29,3 +29,18 @@ int main() {
 	return 0;
 }
 
+#include<stdio.h>
+int main()
+{
+    int i,j,n=15,count=0,line=1;
+    for(i=0;i<n;i++)
+    {
+        printf("* ");
+        count++;
+        if(line==count)
+        {
+            printf("\n");
+            line++;
+            count=0;
+        }
+    }
